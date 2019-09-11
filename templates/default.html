@@ -3,8 +3,9 @@
     <header>
         <h2>Kennitölur:</h2>
         <ol>
-            <li>Jón Sveinsson: <a href="/kennitala/2903895681">2903895681</a></li>
-            <li>Konráður Jónsson: <a href="/kennitala/1409787898">1409787898</a></li>
+            {% for index in range(len) %}
+                <li><a href="/frettir/{{index}}">{{ list[index][0] }}</a></li>
+            {% endfor %}
         </ol>
     </header>
 </main>
