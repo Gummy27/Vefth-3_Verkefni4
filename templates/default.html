@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="/static/default.css">
 <main>
     <header>
-        <h2>Kennitölur:</h2>
-        <ol>
-            {% for index in range(len) %}
-                <li><a href="/frettir/{{index}}">{{ list[index][0] }}</a></li>
-            {% endfor %}
-        </ol>
+        {% block header %}{% endblock %}
     </header>
+    <div>
+        <p>{% block content %}{% endblock %}</p>
+    </div>
+    <footer>
+        {% block footer %}{% endblock %}
+    </footer>
 </main>

@@ -4,13 +4,19 @@ import csv
 with open('frettir.csv', 'r', newline='', encoding='utf-8') as file:
 	reader = list(csv.reader(file, delimiter=':'))
 
+for x in range(len(reader)):
+	reader[x].append(reader[x][0].replace(' ', '-'))
+
+
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-	return render_template('default.html', len=len(reader), list=reader)
+	return render_template('selection.tpl', len=len(reader), list=reader)
 
-@app.route("/frettir/<frett>")
+@app.route("/frettir/<int:frett>")
 def frett(frett):
-	article = reader[int(frett)-1]
-	return render_template('Article.html', headline=article[0], greinin=article[1])
+	article = reader[int(frett)]
+	return render_template('article.tpl', index=frett, headline=article[0], greinin=article[1])
+
+app.run(debug=True)
