@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="/static/default.css">
+<link type="text/css" rel="stylesheet" href="/static/base.css/">
 <main>
-    <header>
+    <header class="head">
         {% block header %}{% endblock %}
     </header>
-    <div>
-        <p>{% block content %}{% endblock %}</p>
+    <div class="grid">
+        {% block content %}{% endblock %}
     </div>
-    <footer>
+    <footer class="footer">
         {% block footer %}{% endblock %}
     </footer>
 </main>

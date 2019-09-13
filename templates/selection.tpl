@@ -6,13 +6,13 @@
 {% endblock %}
 
 {% block content %}
-    <section>
-        <img src="/static/Mynd0.jpg">
+    <section class="grid1">
+        <img src="/static/Mynd0.jpg" height="303px" width="485px">
     </section>
-    <section>
+    <section class="grid2">
         <ol>
             {% for index in range(len) %}
-                <li><a href="/frettir/{{ index }}">{{ list[index][0] }}</a></li>
+                <ul><a href="/frettir/{{ index }}">{{ list[index][0] }}</a></ul>
             {% endfor %}
         </ol>
     </section>

@@ -9,7 +9,7 @@
 <div>
     {% block content %}
         <section>
-            <img src="/static/Mynd{{index}}.jpg">
+            <img src="/static/Mynd{{index}}.jpg" width="485px" height={{height}}>
         </section>
         <section>
             <p>{{ greinin }}<p>
