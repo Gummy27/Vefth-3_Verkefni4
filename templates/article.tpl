@@ -8,11 +8,12 @@
 
 <div>
     {% block content %}
-        <section>
+        <section class="grid1">
             <img src="/static/Mynd{{index}}.jpg" width="485px" height={{height}}>
         </section>
-        <section>
+        <section class="grid2">
             <p>{{ greinin }}<p>
+            <p><a href="/">Til baka</a></p>
         </section>
     {% endblock %}
 </div>
