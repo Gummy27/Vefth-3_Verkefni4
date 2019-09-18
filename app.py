@@ -22,7 +22,11 @@ def frett(frett):
 	with Image.open("static/Mynd"+str(frett)+".jpg") as img:
 		width, height = img.size
 
-	return render_template('article.tpl', index=frett, headline=article[0], greinin=article[1], height=height*(485/width))
+	return render_template('article.tpl', index=frett, headline=article[0], greinin=article[1], netfang=article[2], height=height*(485/width))
 
 if __name__ == "__main__":
 	app.run(debug=True, use_reloader=True)
+
+@app.errorhandler(404)
+def error(error):
+	return render_template('error.tpl')

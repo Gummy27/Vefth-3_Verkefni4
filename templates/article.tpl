@@ -20,6 +20,6 @@
 
 <footer>
     {% block footer %}
-        <p>{% include "footer.tpl" %}</p>
+        <p>{% include "footer.tpl" %}| {{netfang}}</p>
     {% endblock %}
 </footer>
